@@ -1,2 +1,4 @@
-build --aspects //tools/linting:aspect.bzl%lint
-build --output_groups=+report
+# build --aspects //tools/linting:aspect.bzl%lint
+# build --output_groups=+report
+build --aspects @mypy_integration//:mypy.bzl%mypy_aspect
+build --output_groups=+mypy
